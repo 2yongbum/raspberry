@@ -19,9 +19,9 @@ while True:
 ```
 
 ## DHT
-https://github.com/adafruit/Adafruit_CircuitPython_DHT
-pip3 install adafruit-circuitpython-dht
-sudo apt-get install libgpiod2
+https://github.com/adafruit/Adafruit_CircuitPython_DHT  
+pip3 install adafruit-circuitpython-dht  
+sudo apt-get install libgpiod2  
 
 dht.py
 ```python

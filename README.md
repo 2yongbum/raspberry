@@ -18,6 +18,38 @@ while True:
 
 ```
 
+## DHT
+git clone https://github.com/adafruit/Adafruit_Python_DHT.git
+
+cd Adafruit_Python_DHT
+
+sudo python setup.py install
+
+cd examples
+
+AdafruitDHT.py 11 4
+
+
+
+
+
+dht.py
+```python
+
+import Adafruit_DHT
+
+sensor = Adafruit_DHT.DHT11
+
+pin = 4
+
+humidity, temperature = Adafruit_DHT.read_retry(sensor, pin)
+
+print("Humidity:", humidity)
+
+print("Temperature:", temperature)
+```
+
+
 ## UBIDOTS example
 
 ```jsx

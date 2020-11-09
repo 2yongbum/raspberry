@@ -19,57 +19,17 @@ while True:
 ```
 
 ## DHT
-git clone https://github.com/adafruit/Adafruit_Python_DHT.git
+https://github.com/adafruit/Adafruit_CircuitPython_DHT
 
-cd Adafruit_Python_DHT
-
-sudo python setup.py install
-
-cd examples
-
-AdafruitDHT.py 11 4
-
-
-
-
+pip3 install adafruit-circuitpython-dht
 
 dht.py
 ```python
-
-import Adafruit_DHT
-
-sensor = Adafruit_DHT.DHT11
-
-pin = 4
-
-humidity, temperature = Adafruit_DHT.read_retry(sensor, pin)
-
-print("Humidity:", humidity)
-
-print("Temperature:", temperature)
-```
-
-
-dht2.py
-```python
-
-#temp.py
-
-import datetime
-
-import Adafruit_DHT as dht
-
-#온습도센서 모듈에 따라 DHT11, DHT22 변경해야 함
-
-#DHT센서의 핀번호 보통 4를 입력
-
-h,t = dht.read_retry(dht.DHT11,4)
-
- 
-
-print (h)
-
-print (t)
+import adafruit_dht
+from board import D18
+dht_device = adafruit_dht.DHT11(D18)
+temperature = dht_device.temperature
+humidity = dht_device.humidity
 ```
 
 ## UBIDOTS example
